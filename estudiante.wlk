@@ -60,9 +60,9 @@ object remadora inherits Selectiva {
 }
 
 
-///////////////////////////////////////
+/////////////////////////////////////
 // Formas de estudiar (último cambio)
-///////////////////////////////////////
+/////////////////////////////////////
 
 class Selectiva {
         method estudiar(estudiante){
@@ -108,7 +108,7 @@ class Enfocado inherits Estudiante {
 
 
 
-//acoplamiento entre formadeelegir y estudiante? prioritaria tiene una materia que esta relacionada al estudiante. La forma de elegir esta muy arraigada al eatudiante, esta muy acopladas. Aun asi pudimos dividir bien las prioridades. Igual siempre estan acoplados. Por ejemplo el curso mas colgado depende del estudiante. La forma de elegir solo se encarga de elegir
+//acoplamiento entre formadeelegir (formadeestudiar) y estudiante? prioritaria tiene una materia que esta relacionada al estudiante. La forma de elegir esta muy arraigada al eatudiante, esta muy acopladas. Aun asi pudimos dividir bien las prioridades. Igual siempre estan acoplados. Por ejemplo el curso mas colgado depende del estudiante. La forma de elegir solo se encarga de elegir
 
 //cohesion. es cuando el objeto hace pocas cosas... en cambio si meto todo en un solo objeto chau cohesion. Aca la cohesion bastante bien, muchos objetos chiquitos, hacen pocas cosas.
 
