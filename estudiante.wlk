@@ -16,7 +16,7 @@ formaDeEstudiar.estudiar(self)
         }
         method trabajarSobre(tareaElegida){
 tareasPendientes.remove(tareaElegida)
- tareasCompletas.add(tareaElegida)
+tareasCompletas.add(tareaElegida)
         }
 
         method completo(tarea) = tareasCompletas.contains(tarea)
@@ -97,6 +97,11 @@ class Distraido inherits Estudiante {
         override method tiempoQueRequiere(tarea) = super(tarea) + distraccion
 
 }
+
+
+//a los enfocados les rinde mas el tiempo. 
+
+
 
 class Enfocado inherits Estudiante {
         override method tiempoQueRequiere(tarea) = (super(tarea) - 2).max(1)
