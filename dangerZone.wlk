@@ -9,6 +9,24 @@ class Empleado {
    var salud = 100
    
 
-   method estaIncapacitado() = salud > puesto.saludCritica
+   method estaIncapacitado() = salud < puesto.saludCritica()
 
 }
+
+object espia {
+
+   method saludCritica() = 30
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
