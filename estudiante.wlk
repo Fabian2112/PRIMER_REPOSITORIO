@@ -9,24 +9,24 @@ class Estudiante {
         var property formaDeEstudiar
 
         method recibirTarea(tarea){
-                tareasPendientes.add(tarea)
+tareasPendientes.add(tarea)
         }
         method estudiar(){
-                formaDeEstudiar.estudiar(self)
+formaDeEstudiar.estudiar(self)
         }
         method trabajarSobre(tareaElegida){
-                tareasPendientes.remove(tareaElegida)
-                tareasCompletas.add(tareaElegida)
+tareasPendientes.remove(tareaElegida)
+ tareasCompletas.add(tareaElegida)
         }
 
         method completo(tarea) = tareasCompletas.contains(tarea)
 
-        method cursoMasColgado() = self.cursos().max {
-                curso => self.nivelDeCuelgue(curso)
+        method cursoMasColgado() = self.cursos().max {curso => self.nivelDeCuelgue(curso)
         }
+
         method nivelDeCuelgue(curso)
-                = tareasCompletas.count {tarea => tarea.curso() == curso}
-                        - tareasPendientes.count {tarea => tarea.curso() == curso}
+ = tareasCompletas.count {tarea => tarea.curso() == curso}
+ - tareasPendientes.count {tarea => tarea.curso() == curso}
 
         method cursos() = self.tareasRecibidas().map {tarea => tarea.curso()}.asSet()
 
@@ -37,27 +37,25 @@ class Estudiante {
 }
 
 object hijoDelRigor inherits Selectiva {
-        override method elegirTarea(tareas, estudiante) = tareas.min {tarea =>
-                tarea.proximidadAFechaDeEntrega()
+        override method elegirTarea(tareas, estudiante) = tareas.min {tarea => tarea.proximidadAFechaDeEntrega()
         }
-}        
+}
+
 object prudente inherits Selectiva {
         override method elegirTarea(tareas, estudiante) = tareas.max {tarea =>
-                estudiante.tiempoQueRequiere(tarea)
+estudiante.tiempoQueRequiere(tarea)
         }
 }
 
 class Prioritaria inherits Selectiva {
         const property materia
         override method elegirTarea(tareas, estudiante)
-                = tareas.findOrElse({tarea =>
-                                tarea.materia() == materia
-                        }, {tareas.first()})
+ = tareas.findOrElse({tarea =>
+ tarea.materia() == materia}, {tareas.first()})
 }
 
 object remadora inherits Selectiva {
-        override method elegirTarea(tareas, estudiante) = tareas.max { tarea =>
-                tarea.curso() == estudiante.cursoMasColgado()
+        override method elegirTarea(tareas, estudiante) = tareas.max { tarea => tarea.curso() == estudiante.cursoMasColgado()
         }
 }
 
@@ -68,16 +66,13 @@ object remadora inherits Selectiva {
 
 class Selectiva {
         method estudiar(estudiante){
-                 const tareaElegida = self.elegirTarea(estudiante.tareasPendientes(), estudiante)
-                 estudiante.trabajarSobre(tareaElegida)
+                 const tareaElegida = self.elegirTarea(estudiante.tareasPendientes(), estudiante) estudiante.trabajarSobre(tareaElegida)
         }
         method elegirTarea(tareas, estudiante)
 }
 
 class Complecionista {
-        method estudiar(estudiante){
-                estudiante.tareasPendientes()
-                        .forEach {tarea => estudiante.trabajarSobre(tarea)}
+        method .forEach {tarea => estudiante.trabajarSobre(tarea)}
         }
 }
 
