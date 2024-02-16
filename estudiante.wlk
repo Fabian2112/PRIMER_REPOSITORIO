@@ -113,3 +113,8 @@ class Enfocado inherits Estudiante {
 //cohesion. es cuando el objeto hace pocas cosas... en cambio si meto todo en un solo objeto chau cohesion. Aca la cohesion bastante bien, muchos objetos chiquitos, hacen pocas cosas.
 
 //estos dos conceptos son cualitativos. No hay una medicion preciaa
+
+
+
+// la herencia es algo estatico y la estamos utilizando en tipo simple (hereda de 1 sola superclase).
+
