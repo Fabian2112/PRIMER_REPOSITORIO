@@ -28,8 +28,7 @@ class Estudiante {
                 = tareasCompletas.count {tarea => tarea.curso() == curso}
                         - tareasPendientes.count {tarea => tarea.curso() == curso}
 
-        method cursos() = self.tareasRecibidas()
-                                                .map {tarea => tarea.curso()}.asSet()
+        method cursos() = self.tareasRecibidas().map {tarea => tarea.curso()}.asSet()
 
         method tareasRecibidas() = tareasCompletas + tareasPendientes
 
