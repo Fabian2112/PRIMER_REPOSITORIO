@@ -72,7 +72,8 @@ class Selectiva {
 }
 
 class Complecionista {
-        method .forEach {tarea => estudiante.trabajarSobre(tarea)}
+        method estudiar(estudiante){
+estudiante.tareasPendientes().forEach {tarea => estudiante.trabajarSobre(tarea)}
         }
 }
 
