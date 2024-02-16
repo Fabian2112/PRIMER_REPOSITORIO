@@ -60,9 +60,9 @@ object remadora inherits Selectiva {
 }
 
 
-//////////////////////////////////////////////
-//// Formas de estudiar (último cambio)
-//////////////////////////////////////////////
+///////////////////////////////////////
+// Formas de estudiar (último cambio)
+///////////////////////////////////////
 
 class Selectiva {
         method estudiar(estudiante){
@@ -78,10 +78,10 @@ estudiante.tareasPendientes().forEach {tarea => estudiante.trabajarSobre(tarea)}
 }
 
 
-//////////////////////////////////////////////
-//// Administración de tiempo:
-//// Nuevos tipos de estudiantes
-//////////////////////////////////////////////
+////////////////////////////////////
+// Administración de tiempo:
+// Nuevos tipos de estudiantes
+////////////////////////////////////
 
 
 class Distraido inherits Estudiante {
@@ -100,7 +100,6 @@ class Distraido inherits Estudiante {
 
 
 //a los enfocados les rinde mas el tiempo. 
-
 
 
 class Enfocado inherits Estudiante {
