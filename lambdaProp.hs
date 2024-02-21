@@ -41,9 +41,7 @@ deptosDeEjemplo = [
 -- solución
 
 {-
-Definir las funciones mayor y menor que reciban una función y dos valores,
- y retorna true si el resultado de evaluar esa función sobre el primer
- valor es mayor o menor que el resultado de evaluarlo sobre el segundo valor respectivamente.
+Definir las funciones mayor y menor que reciban una función y dos valores, y retorna true si el resultado de evaluar esa función sobre el primer valor es mayor o menor que el resultado de evaluarlo sobre el segundo valor respectivamente.
 -}
 -- ordenarSegun :: (a -> a -> Bool)-> [a] -> [a]
 -- ordenarSegun (menor length) ["hola", "nahue", "y", "mora"]
@@ -57,9 +55,7 @@ menor f valor1 valor2 = f valor1 < f valor2
 {-
 Definir las siguientes funciones para que puedan ser usadas como
 requisitos de búsqueda:
-- ubicadoEn que dada una lista de barrios que le interesan al usuario,
-retorne verdadero si el departamento se encuentra en alguno de los barrios
-de la lista.
+- ubicadoEn que dada una lista de barrios que le interesan al usuario,retorne verdadero si el departamento se encuentra en alguno de los barrios de la lista.
 - cumpleRango que a partir de una función y dos números, indique si el
 valor retornado por la función al ser aplicada con el departamento se
 encuentra entre los dos valores indicados.
